@@ -2,7 +2,18 @@ import React from 'react';
 import { Text, View, FlatList, StyleSheet } from 'react-native';
 
 const ListScreen = () => {
-  const friends = [{ name: 'Fritz' }, { name: 'Sasha' }, { name: 'Kristen' }];
+  //Create an array of names to display
+
+  const friends = [
+    { name: 'Fritz' },
+    { name: 'Sasha' },
+    { name: 'Kristen' },
+    { name: 'Anna' },
+    { name: 'Wek' },
+    { name: 'Jelek' },
+  ];
+
+  //Return the items/content
   return (
     <FlatList
       keyExtractor={(friend) => friend.name}
