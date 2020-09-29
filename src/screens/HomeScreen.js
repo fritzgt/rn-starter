@@ -10,7 +10,11 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View>
       <View style={styles.container}>
-        <Button title="+" onPress={() => setCounter(counter + 1)} />
+        <Button
+          style={styles.button}
+          title="+"
+          onPress={() => setCounter(counter + 1)}
+        />
         <Text style={styles.text}>Counter: {counter}</Text>
         <Button
           onPress={() => (counter <= 0 ? '' : setCounter(counter - 1))}
@@ -35,6 +39,9 @@ const styles = StyleSheet.create({
   },
   spacing: {
     marginVertical: 50,
+  },
+  button: {
+    fontSize: 150,
   },
 });
 
