@@ -4,6 +4,7 @@ import HomeScreen from './src/screens/HomeScreen';
 import ComponentsScreen from './src/screens/ComponentsScreen';
 import ListScreen from './src/screens/ListScreen';
 import Section from './src/screens/SectionList';
+import CounterScreen from './src/screens/CounterScreen';
 
 const navigator = createStackNavigator(
   {
@@ -11,9 +12,10 @@ const navigator = createStackNavigator(
     Components: ComponentsScreen,
     List: ListScreen,
     Section: Section,
+    Counter: CounterScreen,
   },
   {
-    initialRouteName: 'Section',
+    initialRouteName: 'Home',
     defaultNavigationOptions: {
       title: 'App',
     },

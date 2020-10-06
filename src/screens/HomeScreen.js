@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, Button, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Button } from 'react-native';
 
 const HomeScreen = ({ navigation }) => {
   const [counter, setCounter] = useState(0);
@@ -9,20 +9,20 @@ const HomeScreen = ({ navigation }) => {
   };
   return (
     <View>
-      <View style={styles.container}>
-        <Button
-          style={styles.button}
-          title="+"
-          onPress={() => setCounter(counter + 1)}
-        />
-        <Text style={styles.text}>Counter: {counter}</Text>
-        <Button
-          onPress={() => (counter <= 0 ? '' : setCounter(counter - 1))}
-          title="-"
-        />
-      </View>
-
-      <Button title="Go to List" onPress={() => navigate()} />
+      <Text>Navigation Screen</Text>
+      <Button
+        title="Go to Components"
+        onPress={() => navigation.navigate('Components')}
+      />
+      <Button title="Go to List" onPress={() => navigation.navigate('List')} />
+      <Button
+        title="Go to Section"
+        onPress={() => navigation.navigate('Section')}
+      />
+      <Button
+        title="Go to Counter"
+        onPress={() => navigation.navigate('Counter')}
+      />
     </View>
   );
 };
